@@ -5,6 +5,11 @@
 [node name="Main" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(142, 136)
-scale = Vector2(1.8125, 1.68791)
+position = Vector2(526, 435)
+scale = Vector2(2.85156, 2.65555)
+texture = ExtResource("1_mhc52")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(204.25, 147.013)
+scale = Vector2(1.99609, 1.85888)
 texture = ExtResource("1_mhc52")
