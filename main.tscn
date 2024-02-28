@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3t8ipkb2aisv"]
+[gd_scene load_steps=3 format=3 uid="uid://b3t8ipkb2aisv"]
 
 [ext_resource type="Texture2D" uid="uid://2nr514aof6vf" path="res://icon.svg" id="1_mhc52"]
+[ext_resource type="Script" path="res://Icon.gd" id="2_wejpx"]
 
 [node name="Main" type="Node2D"]
 
@@ -8,3 +9,4 @@
 position = Vector2(1002, 383)
 scale = Vector2(13.875, 6.10938)
 texture = ExtResource("1_mhc52")
+script = ExtResource("2_wejpx")
