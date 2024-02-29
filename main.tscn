@@ -25,8 +25,8 @@ text = "Quit
 "
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(750, 602)
-scale = Vector2(12.375, 7.6875)
+position = Vector2(571, 162)
+scale = Vector2(1.65625, 1.65625)
 texture = ExtResource("1_mhc52")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
