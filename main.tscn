@@ -1,20 +1,27 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3t8ipkb2aisv"]
 
-[ext_resource type="Texture2D" uid="uid://2nr514aof6vf" path="res://icon.svg" id="1_mhc52"]
+[ext_resource type="Script" path="res://main.cs" id="1_yxr3g"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_yxr3g")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(958, 470)
-scale = Vector2(2.85156, 2.65555)
-texture = ExtResource("1_mhc52")
+[node name="Play" type="Button" parent="."]
+offset_left = 404.0
+offset_top = 328.0
+offset_right = 739.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 25
+text = "Play
+"
 
-[node name="Icon3" type="Sprite2D" parent="."]
-position = Vector2(188, 460)
-scale = Vector2(2.85156, 2.65555)
-texture = ExtResource("1_mhc52")
+[node name="Quit" type="Button" parent="."]
+offset_left = 404.0
+offset_top = 437.0
+offset_right = 739.0
+offset_bottom = 528.0
+theme_override_font_sizes/font_size = 25
+text = "Quit
+"
 
-[node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(565, 151)
-scale = Vector2(1.99609, 1.85888)
-texture = ExtResource("1_mhc52")
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
