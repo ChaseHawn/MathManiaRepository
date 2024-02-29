@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3t8ipkb2aisv"]
+[gd_scene load_steps=3 format=3 uid="uid://b3t8ipkb2aisv"]
 
+[ext_resource type="Texture2D" uid="uid://2nr514aof6vf" path="res://icon.svg" id="1_mhc52"]
 [ext_resource type="Script" path="res://main.cs" id="1_yxr3g"]
 
 [node name="Main" type="Node2D"]
@@ -22,6 +23,11 @@ offset_bottom = 528.0
 theme_override_font_sizes/font_size = 25
 text = "Quit
 "
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(571, 162)
+scale = Vector2(1.65625, 1.65625)
+texture = ExtResource("1_mhc52")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
