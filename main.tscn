@@ -1,10 +1,27 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3t8ipkb2aisv"]
 
-[ext_resource type="Texture2D" uid="uid://2nr514aof6vf" path="res://icon.svg" id="1_mhc52"]
+[ext_resource type="Script" path="res://main.cs" id="1_yxr3g"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_yxr3g")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(1002, 383)
-scale = Vector2(13.875, 6.10938)
-texture = ExtResource("1_mhc52")
+[node name="Play" type="Button" parent="."]
+offset_left = 404.0
+offset_top = 328.0
+offset_right = 739.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 25
+text = "Play
+"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 404.0
+offset_top = 437.0
+offset_right = 739.0
+offset_bottom = 528.0
+theme_override_font_sizes/font_size = 25
+text = "Quit
+"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
