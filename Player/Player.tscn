@@ -187,7 +187,7 @@ script = ExtResource("1_1cr7r")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rmd2w")
 animation = &"w-walk"
-frame_progress = 0.231424
+frame_progress = 0.371358
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

@@ -28,11 +28,11 @@ public partial class ManSprite : CharacterBody2D
 	{
   		if (player_state == "idle")
 		{
-			AnimatedSprite2D.Play("idle");
+			ManSprite.AnimatedSprite2D.Play("idle");
 		}
 		if (player_state == "walking")
 		{
-			AnimatedSprite2D.Stop();
+			ManSprite.AnimatedSprite2D.Stop();
 		}
 	}
 }
