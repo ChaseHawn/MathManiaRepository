@@ -5,7 +5,7 @@
     "tasks": [
         {
             "label": "build",
-            "command": "dotnet",
+            "command": "/Users/chasehawn/Downloads/Godot_mono.app/Contents/MacOS/Godot",
             "type": "shell",
             "args": [
                 "build",
