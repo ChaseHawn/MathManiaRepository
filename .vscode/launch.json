@@ -5,10 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "launch", "type": "coreclr",
-            "request": "launch", "preLaunchTask": "build",
+            "name": "Math Mania Project",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
             "program": "/Users/chasehawn/Downloads/Godot_mono.app/Contents/MacOS/Godot",
-            "console": "internalConsole", "stopAtEntry": false
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "args": ["--path","${workspaceRoot}"]
         }
     ]
 }
