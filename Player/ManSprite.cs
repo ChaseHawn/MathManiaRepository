@@ -4,7 +4,8 @@ using System;
 public partial class ManSprite : CharacterBody2D
 {
 	int speed = 100;
-	string player_state = "";
+	string player_state;
+	private AnimatedSprite2D AnimatedSprite;
 	
 	public override void _PhysicsProcess(double delta)
 	{
@@ -21,18 +22,19 @@ public partial class ManSprite : CharacterBody2D
 		Velocity = direction * speed;
 		MoveAndSlide();
 		
-		PlayAnim(direction);
+		PlayAnim();
 	}
 	
-	public void PlayAnim(string dir)
+	public void PlayAnim()
 	{
+		GD.Print("TEST");
   		if (player_state == "idle")
 		{
-			ManSprite.AnimatedSprite2D.Play("idle");
+			AnimatedSprite.Play("idle");
 		}
 		if (player_state == "walking")
 		{
-			ManSprite.AnimatedSprite2D.Stop();
+			AnimatedSprite.Stop();
 		}
 	}
 }
