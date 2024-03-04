@@ -6,6 +6,11 @@ public partial class ManSprite : CharacterBody2D
 	int speed = 100;
 	string player_state;
 	private AnimatedSprite2D AnimatedSprite;
+
+	public override void _Ready()
+    {
+        AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+    }
 	
 	public override void _PhysicsProcess(double delta)
 	{
@@ -20,14 +25,13 @@ public partial class ManSprite : CharacterBody2D
 			player_state = "walking";
 		}
 		Velocity = direction * speed;
-		MoveAndSlide();
 		
+		MoveAndSlide();
 		PlayAnim();
 	}
 	
 	public void PlayAnim()
 	{
-		GD.Print("TEST");
   		if (player_state == "idle")
 		{
 			AnimatedSprite.Play("idle");
