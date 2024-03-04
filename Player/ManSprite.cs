@@ -4,9 +4,6 @@ using System;
 public partial class ManSprite : CharacterBody2D
 {
 	int speed = 100;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	string player_state;
 	private AnimatedSprite2D AnimatedSprite;
 
@@ -14,15 +11,7 @@ public partial class ManSprite : CharacterBody2D
     {
         AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
     }
-=======
-	string player_state = "";
->>>>>>> parent of b0efae3 (Test)
-=======
-	string player_state = "";
->>>>>>> parent of b0efae3 (Test)
-=======
-	string player_state = "";
->>>>>>> parent of b0efae3 (Test)
+
 	
 	public override void _PhysicsProcess(double delta)
 	{
@@ -38,31 +27,19 @@ public partial class ManSprite : CharacterBody2D
 		}
 		Velocity = direction * speed;
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		MoveAndSlide();
 		PlayAnim();
-=======
-		PlayAnim(direction);
->>>>>>> parent of b0efae3 (Test)
-=======
-		PlayAnim(direction);
->>>>>>> parent of b0efae3 (Test)
-=======
-		PlayAnim(direction);
->>>>>>> parent of b0efae3 (Test)
 	}
 	
-	public void PlayAnim(string dir)
+	public void PlayAnim()
 	{
   		if (player_state == "idle")
 		{
-			ManSprite.AnimatedSprite2D.Play("idle");
+			AnimatedSprite.Play("idle");
 		}
 		if (player_state == "walking")
 		{
-			ManSprite.AnimatedSprite2D.Stop();
+			AnimatedSprite.Stop();
 		}
 	}
 }
