@@ -6,6 +6,7 @@ public partial class ManSprite : CharacterBody2D
 	int speed = 100;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	string player_state;
 	private AnimatedSprite2D AnimatedSprite;
 
@@ -13,6 +14,9 @@ public partial class ManSprite : CharacterBody2D
     {
         AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
     }
+=======
+	string player_state = "";
+>>>>>>> parent of b0efae3 (Test)
 =======
 	string player_state = "";
 >>>>>>> parent of b0efae3 (Test)
@@ -36,8 +40,12 @@ public partial class ManSprite : CharacterBody2D
 		
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		MoveAndSlide();
 		PlayAnim();
+=======
+		PlayAnim(direction);
+>>>>>>> parent of b0efae3 (Test)
 =======
 		PlayAnim(direction);
 >>>>>>> parent of b0efae3 (Test)
