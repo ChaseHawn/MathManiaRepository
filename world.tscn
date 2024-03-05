@@ -5,3 +5,6 @@
 [node name="World" type="Node2D"]
 
 [node name="ManSprite" parent="." instance=ExtResource("1_1o0dh")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)

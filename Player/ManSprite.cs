@@ -1,9 +1,11 @@
 using Godot;
 using System;
+using System.Numerics;
+using System.Reflection.PortableExecutable;
 
 public partial class ManSprite : CharacterBody2D
 {
-	int speed = 100;
+	int speed = 80;
 	string player_state;
 	private AnimatedSprite2D AnimatedSprite;
 
@@ -11,7 +13,6 @@ public partial class ManSprite : CharacterBody2D
     {
         AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
     }
-
 	
 	public override void _PhysicsProcess(double delta)
 	{
@@ -28,10 +29,10 @@ public partial class ManSprite : CharacterBody2D
 		Velocity = direction * speed;
 		
 		MoveAndSlide();
-		PlayAnim();
+		PlayAnim(direction);
 	}
-	
-	public void PlayAnim()
+		
+	public void PlayAnim(Godot.Vector2 dir)
 	{
   		if (player_state == "idle")
 		{
@@ -39,7 +40,39 @@ public partial class ManSprite : CharacterBody2D
 		}
 		if (player_state == "walking")
 		{
-			AnimatedSprite.Stop();
+			if (dir.Y == -1)
+				{
+					AnimatedSprite.Play("n-walk");
+				}
+			if (dir.X == 1)
+				{
+					AnimatedSprite.Play("e-walk");
+				}
+			if (dir.Y == 1)
+				{
+					AnimatedSprite.Play("s-walk");
+				}
+			if (dir.X == -1)
+				{
+					AnimatedSprite.Play("w-walk");
+				}
+
+			if (dir.X > 0.5 && dir.Y < -0.5)
+				{
+					AnimatedSprite.Play("ne-walk");
+				}
+			if (dir.X < -0.5 && dir.Y < -0.5)
+				{
+					AnimatedSprite.Play("nw-walk");
+				}
+			if (dir.X < -0.5 && dir.Y > 0.5)
+				{
+					AnimatedSprite.Play("sw-walk");
+				}
+			if (dir.X > 0.5 && dir.Y > 0.5)
+				{
+					AnimatedSprite.Play("se-walk");
+				}
 		}
 	}
 }
