@@ -6,7 +6,7 @@ public partial class main : Node2D
 	private void _on_play_pressed()
 	{
 		// Switches to world scene
-		GetTree().ChangeSceneToFile("res://world.tscn");
+		GetTree().ChangeSceneToFile("res://world1.tscn");
 	}
 	
 	private void _on_quit_pressed()
