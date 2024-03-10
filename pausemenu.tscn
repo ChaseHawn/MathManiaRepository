@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctam0c8rbrdpt"]
+
+[ext_resource type="Texture2D" uid="uid://bjqm17mxyq682" path="res://art/menus/PausedMenuBackground.png" id="1_31pdn"]
+[ext_resource type="Texture2D" uid="uid://bmhb04vmol3lh" path="res://art/menus/ResumeButtonNormal.png" id="2_yvkoo"]
+[ext_resource type="Texture2D" uid="uid://y28ddm7vwta2" path="res://art/menus/ResumeButtonDown.png" id="3_74ysq"]
+[ext_resource type="Texture2D" uid="uid://diijo1wu6ngw1" path="res://art/menus/VolumeButtonNormal.png" id="4_qnscy"]
+[ext_resource type="Texture2D" uid="uid://bmsigcmxdo3jv" path="res://art/menus/VolumeButtonDown.png" id="5_vl6ud"]
+[ext_resource type="Texture2D" uid="uid://dfvb5fmq46otw" path="res://art/menus/QuitButtonNormal.png" id="6_6fcc0"]
+[ext_resource type="Texture2D" uid="uid://crgrqncij3w1g" path="res://art/menus/QuitButtonDown.png" id="7_fr576"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMenuRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -39.0
+offset_right = 50.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.32696, 3.32)
+pivot_offset = Vector2(50, 39)
+texture = ExtResource("1_31pdn")
+
+[node name="MenuBoxContainer" type="VBoxContainer" parent="PauseMenuRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -20.0
+offset_right = 45.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 2.08165e-12)
+theme_override_constants/separation = 3
+
+[node name="ResumeButton" type="TextureButton" parent="PauseMenuRect/MenuBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_yvkoo")
+texture_pressed = ExtResource("3_74ysq")
+
+[node name="VolumeButton" type="TextureButton" parent="PauseMenuRect/MenuBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_qnscy")
+texture_pressed = ExtResource("5_vl6ud")
+
+[node name="QuitButton" type="TextureButton" parent="PauseMenuRect/MenuBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_6fcc0")
+texture_pressed = ExtResource("7_fr576")
