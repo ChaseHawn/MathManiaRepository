@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3hijh78b1acc"]
+[gd_scene load_steps=9 format=3 uid="uid://d3hijh78b1acc"]
 
+[ext_resource type="Script" path="res://world1_game.cs" id="1_2q8fa"]
 [ext_resource type="PackedScene" uid="uid://qaaxecolyapg" path="res://Player/Player.tscn" id="1_4tj1i"]
+[ext_resource type="PackedScene" uid="uid://ctam0c8rbrdpt" path="res://pausemenu.tscn" id="3_7w4ni"]
 [ext_resource type="Texture2D" uid="uid://cwgc4auymflfb" path="res://art/world1/World1TileMap.png" id="4_1y3xg"]
 
 [sub_resource type="Shader" id="Shader_4mpgc"]
@@ -66,7 +68,8 @@ texture = ExtResource("4_1y3xg")
 [sub_resource type="TileSet" id="TileSet_ptwyg"]
 sources/8 = SubResource("TileSetAtlasSource_ueuxm")
 
-[node name="World" type="Node2D"]
+[node name="World1" type="Node2D"]
+script = ExtResource("1_2q8fa")
 
 [node name="ManSprite" parent="." instance=ExtResource("1_4tj1i")]
 
@@ -86,3 +89,7 @@ layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array(0, 65536, 0)
 layer_2/name = "3"
 layer_2/tile_data = PackedInt32Array()
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_7w4ni")]

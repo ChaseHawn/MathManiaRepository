@@ -3,7 +3,7 @@ using System;
 using System.Numerics;
 using System.Reflection.PortableExecutable;
 
-public partial class ManSprite : CharacterBody2D
+public partial class playable_character : CharacterBody2D
 {
 	int speed = 80;
 	string player_state;

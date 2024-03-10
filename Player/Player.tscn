@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=3 uid="uid://qaaxecolyapg"]
 
-[ext_resource type="Script" path="res://Player/ManSprite.cs" id="1_1cr7r"]
+[ext_resource type="Script" path="res://Player/playable_character.cs" id="1_1cr7r"]
 [ext_resource type="Texture2D" uid="uid://b7rbo7j1vai2y" path="res://art/characters/ManSpriteFinal_3.png" id="2_dvqu1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6y2yp"]

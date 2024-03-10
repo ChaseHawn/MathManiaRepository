@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://crgrqncij3w1g" path="res://art/menus/QuitButtonDown.png" id="7_fr576"]
 
 [node name="PauseMenu" type="Control"]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
