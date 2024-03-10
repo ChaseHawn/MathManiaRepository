@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://d3hijh78b1acc"]
 
 [ext_resource type="Script" path="res://world1_game.cs" id="1_2q8fa"]
-[ext_resource type="PackedScene" uid="uid://qaaxecolyapg" path="res://Player/player.tscn" id="1_4tj1i"]
+[ext_resource type="PackedScene" uid="uid://qaaxecolyapg" path="res://player/player.tscn" id="1_4tj1i"]
 [ext_resource type="PackedScene" uid="uid://ctam0c8rbrdpt" path="res://pausemenu.tscn" id="3_7w4ni"]
 [ext_resource type="Texture2D" uid="uid://cwgc4auymflfb" path="res://art/world1/World1TileMap.png" id="4_1y3xg"]
 
