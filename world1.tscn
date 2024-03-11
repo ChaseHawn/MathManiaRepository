@@ -92,4 +92,5 @@ layer_2/tile_data = PackedInt32Array()
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_7w4ni")]
+[node name="PauseMenu" parent="CanvasLayer" node_paths=PackedStringArray("World1") instance=ExtResource("3_7w4ni")]
+World1 = NodePath("../..")
