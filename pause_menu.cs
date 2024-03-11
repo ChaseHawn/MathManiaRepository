@@ -9,12 +9,13 @@ public partial class pause_menu : Control
 	public override void _Ready()
 	{	
 		Hide();
-		Node2D TESTING = GetNode<Node2D>("World1");
-		TESTING.Connect("ToggleGamePaused", new Callable(this, MethodName.OnToggleGamePaused));
+		var world1Node = GetTree().Root.FindChild("World1", true, false);
+		world1Node.Connect("ToggleGamePaused", new Callable(this, MethodName.OnToggleGamePaused));
 	}
 
 	public void OnToggleGamePaused(bool isPaused)
 	{
+		GD.Print("Entered");
 		if (isPaused){
 			Show();
 		}
