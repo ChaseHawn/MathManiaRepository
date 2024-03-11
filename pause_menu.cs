@@ -10,10 +10,10 @@ public partial class pause_menu : Control
 	{	
 		Hide();
 		Node2D TESTING = GetNode<Node2D>("World1");
-		TESTING.Connect("HealthDepleted", new Callable(this, MethodName.OnHealthDepleted));
+		TESTING.Connect("ToggleGamePaused", new Callable(this, MethodName.OnToggleGamePaused));
 	}
 
-	public void OnHealthDepleted(bool isPaused)
+	public void OnToggleGamePaused(bool isPaused)
 	{
 		if (isPaused){
 			Show();
