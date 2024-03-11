@@ -8,12 +8,15 @@ public partial class world1_game : Node2D
     {
         GD.Print("TEST!!");
     }
-	public int SomeData;
+
+	[Signal]
+    public delegate void HealthDepletedEventHandler();
+
+    private int _health = 10;
 
 	public override void _Ready()
 	{	
-		SomeData = 43;
-		EmitSignal("SomeDataReady", SomeData);
+		EmitSignal(SignalName.HealthDepleted, _health);
 	}
 	// [Signal]
 	// public delegate	void ToggleGamePausedEventHandler(bool isPaused);
