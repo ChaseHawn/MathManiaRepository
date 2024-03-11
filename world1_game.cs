@@ -11,12 +11,10 @@ public partial class world1_game : Node2D
 	
 	public bool gamePaused
 	{
-		get
-		{
+		get{
 			return _gamePaused;
 		}
-		set
-		{
+		set{
 			_gamePaused = value;
 			GetTree().Paused = _gamePaused;
 			EmitSignal("ToggleGamePaused", _gamePaused);
@@ -26,7 +24,6 @@ public partial class world1_game : Node2D
 	{
 		if (@event is InputEventKey eventKey){
 			if (eventKey.Pressed && eventKey.Keycode == Key.Escape){
-				GD.Print(gamePaused);
 				gamePaused = !gamePaused;
 			}
 		}

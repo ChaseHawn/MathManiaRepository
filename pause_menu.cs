@@ -15,12 +15,33 @@ public partial class pause_menu : Control
 
 	public void OnToggleGamePaused(bool isPaused)
 	{
-		GD.Print("Entered");
 		if (isPaused){
 			Show();
 		}
 		else {
 			Hide();
 		}
+	}
+
+	public void OnResumeButtonPressed()
+	{
+		// Resumes the game
+		var world1Node = GetNode<world1_game>("/root/World1");
+		World1 = world1Node;
+
+        // Resumes the game by setting gamePaused to false
+        World1.gamePaused = false;
+	}
+
+	public void OnVolumeButtonPressed()
+	{
+		// Volume menu pop-up
+		GD.Print("Volume");
+	}
+
+	public void OnQuitButtonPressed()
+	{
+		// Exits the game
+		GetTree().Quit();
 	}
 }

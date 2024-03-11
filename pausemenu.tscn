@@ -67,4 +67,6 @@ layout_mode = 2
 texture_normal = ExtResource("6_6fcc0")
 texture_pressed = ExtResource("7_fr576")
 
-[connection signal="pressed" from="PauseMenuRect/MenuBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenuRect/MenuBoxContainer/ResumeButton" to="." method="OnResumeButtonPressed"]
+[connection signal="pressed" from="PauseMenuRect/MenuBoxContainer/VolumeButton" to="." method="OnVolumeButtonPressed"]
+[connection signal="pressed" from="PauseMenuRect/MenuBoxContainer/QuitButton" to="." method="OnQuitButtonPressed"]
