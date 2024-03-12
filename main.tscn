@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://dpva7rrhparqd"]
+[gd_scene load_steps=29 format=3 uid="uid://dpva7rrhparqd"]
 
 [ext_resource type="Script" path="res://main.cs" id="1_yxr3g"]
 [ext_resource type="Texture2D" uid="uid://de8o2i0vundit" path="res://art/menus/MathManiaMenuTitle-Sheet.png" id="2_l17u5"]
+[ext_resource type="Script" path="res://animated_menu_title.cs" id="3_krojf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h5ppu"]
 atlas = ExtResource("2_l17u5")
@@ -175,7 +176,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3hw5y")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"default",
 "speed": 12.0
 }]
 
@@ -222,7 +223,7 @@ theme_override_font_sizes/font_size = 25
 text = "Quit
 "
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="TitleContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 layout_mode = 1
 anchors_preset = 5
@@ -234,9 +235,12 @@ offset_bottom = 243.0
 grow_horizontal = 2
 pivot_offset = Vector2(2.08165e-12, 2.08165e-12)
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="VBoxContainer"]
+[node name="AnimatedMenuTitle" type="AnimatedSprite2D" parent="TitleContainer"]
 position = Vector2(323, 202)
 scale = Vector2(2.85246, 2.85246)
 sprite_frames = SubResource("SpriteFrames_b0fq0")
-animation = &"new_animation"
-frame_progress = 0.868659
+frame_progress = 0.111457
+script = ExtResource("3_krojf")
+
+[connection signal="pressed" from="Play" to="." method="OnPlayPressed"]
+[connection signal="pressed" from="Quit" to="." method="OnQuitPressed"]
