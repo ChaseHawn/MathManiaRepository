@@ -239,7 +239,7 @@ pivot_offset = Vector2(2.08165e-12, 2.08165e-12)
 position = Vector2(323, 202)
 scale = Vector2(2.85246, 2.85246)
 sprite_frames = SubResource("SpriteFrames_b0fq0")
-frame_progress = 0.111457
+frame_progress = 0.549978
 script = ExtResource("3_krojf")
 
 [connection signal="pressed" from="Play" to="." method="OnPlayPressed"]
