@@ -9,7 +9,7 @@ public partial class pause_menu : Control
 	public override void _Ready()
 	{	
 		Hide();
-		var world1Node = GetTree().Root.FindChild("World1", true, false);
+		var world1Node = GetNode<world1_game>("/root/World1");
 		world1Node.Connect("ToggleGamePaused", new Callable(this, MethodName.OnToggleGamePaused));
 	}
 
@@ -28,8 +28,6 @@ public partial class pause_menu : Control
 		// Resumes the game
 		var world1Node = GetNode<world1_game>("/root/World1");
 		World1 = world1Node;
-
-        // Resumes the game by setting gamePaused to false
         World1.gamePaused = false;
 	}
 

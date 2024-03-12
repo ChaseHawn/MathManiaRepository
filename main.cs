@@ -1,17 +1,15 @@
 using Godot;
 using System;
 
-public partial class main : Node2D
+public partial class main : Control
 {
-	private void _on_play_pressed()
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
 	{
-		// Switches to world scene
-		GetTree().ChangeSceneToFile("res://world1.tscn");
 	}
-	
-	private void _on_quit_pressed()
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
 	{
-		// Exits the program
-		GetTree().Quit();
 	}
 }

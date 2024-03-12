@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1cq8y00kfio4"
-path="res://.godot/imported/MathManiaTitle.png-f6a124b2a1e9a56fcf714f3a1973d834.ctex"
+uid="uid://de8o2i0vundit"
+path="res://.godot/imported/MathManiaMenuTitle-Sheet.png-8e95d2f925b7cd2cb89e98d9e10bf793.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/menus/MathManiaTitle.png"
-dest_files=["res://.godot/imported/MathManiaTitle.png-f6a124b2a1e9a56fcf714f3a1973d834.ctex"]
+source_file="res://art/menus/MathManiaMenuTitle-Sheet.png"
+dest_files=["res://.godot/imported/MathManiaMenuTitle-Sheet.png-8e95d2f925b7cd2cb89e98d9e10bf793.ctex"]
 
 [params]
 

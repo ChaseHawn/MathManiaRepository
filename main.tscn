@@ -1,33 +1,243 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3t8ipkb2aisv"]
+[gd_scene load_steps=28 format=3 uid="uid://dpva7rrhparqd"]
 
 [ext_resource type="Script" path="res://main.cs" id="1_yxr3g"]
-[ext_resource type="Texture2D" uid="uid://c1cq8y00kfio4" path="res://art/menus/MathManiaTitle.png" id="2_02sbd"]
 
-[node name="Main" type="Node2D"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p0xx3"]
+load_path = "res://.godot/imported/MathManiaMenuTitle-Sheet.png-39c13703c0c18d8b42e8c4948f53d09c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6p4p"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(0, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_547f7"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(205, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j634d"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(410, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cammx"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(615, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe2s5"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(820, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lfm8"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(1025, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8gmj"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(1230, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4um3"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(1435, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoxl3"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(1640, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2hen"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(1845, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ounrl"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(2050, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwmcu"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(2255, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb6qk"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(2460, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jon3d"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(2665, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sl3lq"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(2870, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hnsn"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(3075, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysh5k"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(3280, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b71ai"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(3485, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhu4l"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(3690, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v157g"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(3895, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7wen"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(4100, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rdab"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(4305, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjx0v"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(4510, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dsw8v"]
+atlas = SubResource("CompressedTexture2D_p0xx3")
+region = Rect2(4715, 0, 205, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b0fq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6p4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_547f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j634d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cammx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qe2s5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lfm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8gmj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4um3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoxl3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2hen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ounrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwmcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jb6qk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jon3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sl3lq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hnsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysh5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b71ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhu4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v157g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7wen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rdab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjx0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dsw8v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_yxr3g")
 
 [node name="Play" type="Button" parent="."]
-offset_left = 404.0
-offset_top = 328.0
-offset_right = 739.0
-offset_bottom = 419.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.5
+offset_top = -8.0
+offset_right = 167.5
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "Play
 "
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 404.0
-offset_top = 437.0
-offset_right = 739.0
-offset_bottom = 528.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.5
+offset_top = 95.0
+offset_right = 167.5
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "Quit
 "
 
-[node name="MathManiaTitle" type="Sprite2D" parent="."]
-position = Vector2(575, 250)
-scale = Vector2(4.9375, 4.9375)
-texture = ExtResource("2_02sbd")
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -323.0
+offset_right = 323.0
+offset_bottom = 243.0
+grow_horizontal = 2
+pivot_offset = Vector2(2.08165e-12, 2.08165e-12)
 
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="VBoxContainer"]
+position = Vector2(323, 202)
+scale = Vector2(2.85246, 2.85246)
+sprite_frames = SubResource("SpriteFrames_b0fq0")
+frame_progress = 0.0470277
