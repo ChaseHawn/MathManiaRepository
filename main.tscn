@@ -1,8 +1,15 @@
-[gd_scene load_steps=29 format=3 uid="uid://dpva7rrhparqd"]
+[gd_scene load_steps=36 format=3 uid="uid://dpva7rrhparqd"]
 
 [ext_resource type="Script" path="res://main.cs" id="1_yxr3g"]
 [ext_resource type="Texture2D" uid="uid://de8o2i0vundit" path="res://art/menus/MathManiaMenuTitle-Sheet.png" id="2_l17u5"]
 [ext_resource type="Script" path="res://animated_menu_title.cs" id="3_krojf"]
+[ext_resource type="Texture2D" uid="uid://bl0ronrje6bw8" path="res://art/menus/ContinueButtonNormal.png" id="4_7odh3"]
+[ext_resource type="Texture2D" uid="uid://c3ydnq4p36ay0" path="res://art/menus/ContinueButtonDown.png" id="5_ee87x"]
+[ext_resource type="Texture2D" uid="uid://da2m0fd1oikat" path="res://art/menus/ContinueButtonHover.png" id="6_ccae8"]
+[ext_resource type="Texture2D" uid="uid://bvegcvypuw88e" path="res://art/menus/QuitButtonNormal_01.png" id="7_hc3nx"]
+[ext_resource type="Texture2D" uid="uid://b0ghntfjh7w7o" path="res://art/menus/QuitButtonDown_01.png" id="8_j0dj5"]
+[ext_resource type="Texture2D" uid="uid://cnnelwqhgy3cp" path="res://art/menus/QuitButtonHover01.png" id="9_cyhh4"]
+[ext_resource type="AudioStream" uid="uid://cbvby77h6mkwp" path="res://sound/multi-pop-2-188167.mp3" id="10_ln61l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h5ppu"]
 atlas = ExtResource("2_l17u5")
@@ -189,40 +196,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yxr3g")
 
-[node name="Play" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -167.5
-offset_top = -8.0
-offset_right = 167.5
-offset_bottom = 83.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 25
-text = "Play
-"
-
-[node name="Quit" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -167.5
-offset_top = 95.0
-offset_right = 167.5
-offset_bottom = 186.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 25
-text = "Quit
-"
-
 [node name="TitleContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 layout_mode = 1
@@ -230,8 +203,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -323.0
+offset_top = 40.0
 offset_right = 323.0
-offset_bottom = 243.0
+offset_bottom = 283.0
 grow_horizontal = 2
 pivot_offset = Vector2(2.08165e-12, 2.08165e-12)
 
@@ -239,8 +213,48 @@ pivot_offset = Vector2(2.08165e-12, 2.08165e-12)
 position = Vector2(323, 202)
 scale = Vector2(2.85246, 2.85246)
 sprite_frames = SubResource("SpriteFrames_b0fq0")
-frame_progress = 0.549978
+frame_progress = 0.523713
 script = ExtResource("3_krojf")
 
-[connection signal="pressed" from="Play" to="." method="OnPlayPressed"]
-[connection signal="pressed" from="Quit" to="." method="OnQuitPressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = 39.0
+offset_right = 85.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.48, 2.50534)
+pivot_offset = Vector2(85.5, 2.08165e-12)
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Play" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
+texture_normal = ExtResource("4_7odh3")
+texture_pressed = ExtResource("5_ee87x")
+texture_hover = ExtResource("6_ccae8")
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Quit" type="TextureButton" parent="VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
+texture_normal = ExtResource("7_hc3nx")
+texture_pressed = ExtResource("8_j0dj5")
+texture_hover = ExtResource("9_cyhh4")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_ln61l")
+volume_db = -10.0
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="OnPlayPressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/Quit" to="." method="OnQuitPressed"]
+[connection signal="finished" from="ClickSound" to="." method="OnClickSoundFinished"]
