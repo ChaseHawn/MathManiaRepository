@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dpva7rrhparqd"]
+[gd_scene load_steps=39 format=3 uid="uid://dpva7rrhparqd"]
 
 [ext_resource type="Script" path="res://main.cs" id="1_yxr3g"]
 [ext_resource type="Texture2D" uid="uid://de8o2i0vundit" path="res://art/menus/MathManiaMenuTitle-Sheet.png" id="2_l17u5"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://celff674ktcl2" path="res://sfx/continuesfx.wav" id="10_54ckt"]
 [ext_resource type="AudioStream" uid="uid://ugailylijy5l" path="res://music/waiting-time-175800.mp3" id="11_bf7is"]
 [ext_resource type="FontFile" uid="uid://c7f3tn5rjhwys" path="res://fonts/casio-fx-9860gii.ttf" id="12_6s07v"]
+[ext_resource type="PackedScene" uid="uid://dk8u50ay2dvo6" path="res://parallaxbackground.tscn" id="13_1s5p5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h5ppu"]
 atlas = ExtResource("2_l17u5")
@@ -276,11 +277,14 @@ offset_right = 89.0
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.76, 0.76)
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("12_6s07v")
 theme_override_font_sizes/font_size = 21
 text = "MADE BY CHASE AND RYAN
 "
 horizontal_alignment = 2
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("13_1s5p5")]
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="OnPlayPressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/Quit" to="." method="OnQuitPressed"]

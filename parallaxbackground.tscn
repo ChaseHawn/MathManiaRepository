@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk8u50ay2dvo6"]
+
+[ext_resource type="Texture2D" uid="uid://bic4e3rxcyedg" path="res://art/menus/TestBackgroundNotFinal.png" id="1_4rvej"]
+[ext_resource type="Script" path="res://parallax_background.cs" id="1_jbo2v"]
+[ext_resource type="Texture2D" uid="uid://rclsql27xn5u" path="res://art/menus/TestGrassNotFinal.png" id="2_4jyk5"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_jbo2v")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="TestBackgroundNotFinal" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 324)
+texture = ExtResource("1_4rvej")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="TestGrassNotFinal" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(114.5, 478.5)
+texture = ExtResource("2_4jyk5")
+
+[node name="TestGrassNotFinal2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(343, 478.5)
+texture = ExtResource("2_4jyk5")
+
+[node name="TestGrassNotFinal3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(571, 478.5)
+texture = ExtResource("2_4jyk5")
+
+[node name="TestGrassNotFinal4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(800, 478.5)
+scale = Vector2(1.1, 1)
+texture = ExtResource("2_4jyk5")
+
+[node name="TestGrassNotFinal5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1040, 478.5)
+texture = ExtResource("2_4jyk5")

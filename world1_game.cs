@@ -9,6 +9,11 @@ public partial class world1_game : Node2D
 	[Signal]
 	public delegate	void ToggleGamePausedEventHandler(bool isPaused);
 	
+	public override void _Ready()
+    {
+		
+    }
+
 	public bool gamePaused
 	{
 		get{

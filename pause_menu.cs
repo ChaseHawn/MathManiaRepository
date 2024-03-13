@@ -15,6 +15,7 @@ public partial class pause_menu : Control
 
 	public void OnToggleGamePaused(bool isPaused)
 	{
+		// When the game is paused, the pause menu is displayed on screen. Otherwise it becomes hidden.
 		if (isPaused){
 			Show();
 		}
@@ -25,7 +26,7 @@ public partial class pause_menu : Control
 
 	public void OnResumeButtonPressed()
 	{
-		// Resumes the game
+		// The game is resumed when the resume button is pressed.
 		var world1Node = GetNode<world1_game>("/root/World1");
 		World1 = world1Node;
         World1.gamePaused = false;
@@ -33,13 +34,12 @@ public partial class pause_menu : Control
 
 	public void OnVolumeButtonPressed()
 	{
-		// Volume menu pop-up
 		GD.Print("Volume");
 	}
 
 	public void OnQuitButtonPressed()
 	{
-		// Exits the game
+		// The game stops running when the quit button is pressed.
 		GetTree().Quit();
 	}
 }

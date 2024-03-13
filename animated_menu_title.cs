@@ -5,7 +5,7 @@ public partial class animated_menu_title : AnimatedSprite2D
 {
 	public override void _Ready()
     {
-        //Plays animation for menu title
+        // The main menu title animation plays.
         Play("default");
     }
 }
