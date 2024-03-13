@@ -1,33 +1,291 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3t8ipkb2aisv"]
+[gd_scene load_steps=39 format=3 uid="uid://dpva7rrhparqd"]
 
-[ext_resource type="Texture2D" uid="uid://2nr514aof6vf" path="res://icon.svg" id="1_mhc52"]
 [ext_resource type="Script" path="res://main.cs" id="1_yxr3g"]
+[ext_resource type="Texture2D" uid="uid://de8o2i0vundit" path="res://art/menus/MathManiaMenuTitle-Sheet.png" id="2_l17u5"]
+[ext_resource type="Script" path="res://animated_menu_title.cs" id="3_krojf"]
+[ext_resource type="Texture2D" uid="uid://bl0ronrje6bw8" path="res://art/menus/ContinueButtonNormal.png" id="4_7odh3"]
+[ext_resource type="Texture2D" uid="uid://c3ydnq4p36ay0" path="res://art/menus/ContinueButtonDown.png" id="5_ee87x"]
+[ext_resource type="Texture2D" uid="uid://da2m0fd1oikat" path="res://art/menus/ContinueButtonHover.png" id="6_ccae8"]
+[ext_resource type="Texture2D" uid="uid://bvegcvypuw88e" path="res://art/menus/QuitButtonNormal_01.png" id="7_hc3nx"]
+[ext_resource type="Texture2D" uid="uid://b0ghntfjh7w7o" path="res://art/menus/QuitButtonDown_01.png" id="8_j0dj5"]
+[ext_resource type="Texture2D" uid="uid://cnnelwqhgy3cp" path="res://art/menus/QuitButtonHover01.png" id="9_cyhh4"]
+[ext_resource type="AudioStream" uid="uid://celff674ktcl2" path="res://sfx/continuesfx.wav" id="10_54ckt"]
+[ext_resource type="AudioStream" uid="uid://ugailylijy5l" path="res://music/waiting-time-175800.mp3" id="11_bf7is"]
+[ext_resource type="FontFile" uid="uid://c7f3tn5rjhwys" path="res://fonts/casio-fx-9860gii.ttf" id="12_6s07v"]
+[ext_resource type="PackedScene" uid="uid://dk8u50ay2dvo6" path="res://parallaxbackground.tscn" id="13_1s5p5"]
 
-[node name="Main" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5ppu"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(0, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80u04"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(205, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4drjc"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(410, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pt4mg"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(615, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvcip"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(820, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfrru"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(1025, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocvg7"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(1230, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp5rd"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(1435, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vei3l"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(1640, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxxec"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(1845, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg8kp"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(2050, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b1rb"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(2255, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dchl7"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(2460, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntrcq"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(2665, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5dwv"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(2870, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn7ge"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(3075, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mvpe"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(3280, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2c5k"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(3485, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scf4o"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(3690, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4euv"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(3895, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26d7w"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(4100, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j87ff"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(4305, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4u6j"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(4510, 0, 205, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hw5y"]
+atlas = ExtResource("2_l17u5")
+region = Rect2(4715, 0, 205, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b0fq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5ppu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80u04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4drjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pt4mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvcip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfrru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocvg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp5rd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vei3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxxec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg8kp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b1rb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dchl7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntrcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5dwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn7ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mvpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2c5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scf4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4euv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26d7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j87ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4u6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hw5y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_yxr3g")
 
-[node name="Play" type="Button" parent="."]
-offset_left = 404.0
-offset_top = 328.0
-offset_right = 739.0
-offset_bottom = 419.0
-theme_override_font_sizes/font_size = 25
-text = "Play
+[node name="TitleContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -323.0
+offset_top = 40.0
+offset_right = 323.0
+offset_bottom = 283.0
+grow_horizontal = 2
+pivot_offset = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="AnimatedMenuTitle" type="AnimatedSprite2D" parent="TitleContainer"]
+position = Vector2(323, 202)
+scale = Vector2(2.85246, 2.85246)
+sprite_frames = SubResource("SpriteFrames_b0fq0")
+frame_progress = 0.301549
+script = ExtResource("3_krojf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = 39.0
+offset_right = 85.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.48, 2.50534)
+pivot_offset = Vector2(85.5, 2.08165e-12)
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Play" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
+texture_normal = ExtResource("4_7odh3")
+texture_pressed = ExtResource("5_ee87x")
+texture_hover = ExtResource("6_ccae8")
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Quit" type="TextureButton" parent="VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
+texture_normal = ExtResource("7_hc3nx")
+texture_pressed = ExtResource("8_j0dj5")
+texture_hover = ExtResource("9_cyhh4")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_54ckt")
+volume_db = -17.0
+pitch_scale = 1.9
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_bf7is")
+volume_db = -20.0
+
+[node name="CreditsLabel" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -307.0
+offset_top = -24.0
+offset_right = 89.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.76, 0.76)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("12_6s07v")
+theme_override_font_sizes/font_size = 21
+text = "MADE BY CHASE AND RYAN
 "
+horizontal_alignment = 2
 
-[node name="Quit" type="Button" parent="."]
-offset_left = 404.0
-offset_top = 437.0
-offset_right = 739.0
-offset_bottom = 528.0
-theme_override_font_sizes/font_size = 25
-text = "Quit
-"
+[node name="ParallaxBackground" parent="." instance=ExtResource("13_1s5p5")]
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(571, 162)
-scale = Vector2(1.65625, 1.65625)
-texture = ExtResource("1_mhc52")
-
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="OnPlayPressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/Quit" to="." method="OnQuitPressed"]
+[connection signal="finished" from="ClickSound" to="." method="OnClickSoundFinished"]
