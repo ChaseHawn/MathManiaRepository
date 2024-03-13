@@ -9,12 +9,12 @@ public partial class main : Control
 	public bool flag;
 	
 	public override void _Ready()
-    {
+	{
 		// Both ClickSound and MenuMusic is audio is retrieved. The MenuMusic audio is played.
 		ClickSound = GetNode<AudioStreamPlayer>("ClickSound");
 		MenuMusic = GetNode<AudioStreamPlayer>("MenuMusic");
 		MenuMusic.Play();
-    }
+	}
 	
 	private void OnPlayPressed()
 	{

@@ -10,10 +10,10 @@ public partial class playable_character : CharacterBody2D
 	private AnimatedSprite2D AnimatedSprite;
 
 	public override void _Ready()
-    {
+	{
 		// 
-        AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-    }
+		AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+	}
 	
 	public override void _PhysicsProcess(double delta)
 	{
