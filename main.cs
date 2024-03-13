@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 public partial class main : Control
 {
 	private AudioStreamPlayer ClickSound;
+	private AudioStreamPlayer MenuMusic;
 	public bool flag;
 	public override void _Ready()
     {
 		ClickSound = GetNode<AudioStreamPlayer>("ClickSound");
+		MenuMusic = GetNode<AudioStreamPlayer>("MenuMusic");
+		MenuMusic.Play();
     }
 	
 	private void OnPlayPressed()
