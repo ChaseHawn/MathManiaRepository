@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Pixel 12.mp3-c901bc7efebbc11ce9444237af82cf3f
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

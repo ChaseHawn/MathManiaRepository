@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3hijh78b1acc"]
+[gd_scene load_steps=13 format=3 uid="uid://d3hijh78b1acc"]
 
 [ext_resource type="Script" path="res://world1_game.cs" id="1_2q8fa"]
 [ext_resource type="PackedScene" uid="uid://qaaxecolyapg" path="res://player/player.tscn" id="1_4tj1i"]
 [ext_resource type="PackedScene" uid="uid://ctam0c8rbrdpt" path="res://pausemenu.tscn" id="3_7w4ni"]
 [ext_resource type="Texture2D" uid="uid://cwgc4auymflfb" path="res://art/world1/World1TileMap.png" id="4_1y3xg"]
 [ext_resource type="AudioStream" uid="uid://dtbeutm0k6lp0" path="res://music/Pixel 12.mp3" id="5_p1h2u"]
+[ext_resource type="AudioStream" uid="uid://c1pkux7hk1bds" path="res://music/Pixel 9.mp3" id="6_pux4m"]
+[ext_resource type="AudioStream" uid="uid://c8yx37sjrygkt" path="res://music/Pixel 11.mp3" id="7_lgqki"]
+[ext_resource type="AudioStream" uid="uid://drynd0lp00drs" path="res://sfx/run.mp3" id="8_r0t3w"]
 
 [sub_resource type="Shader" id="Shader_4mpgc"]
 code = "shader_type spatial;
@@ -95,6 +98,19 @@ layer_2/tile_data = PackedInt32Array()
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_7w4ni")]
 
-[node name="BackgroundMusic1" type="AudioStreamPlayer" parent="."]
+[node name="BackgroundSong1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_p1h2u")
 volume_db = -25.0
+
+[node name="BackgroundSong2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_pux4m")
+volume_db = -25.0
+
+[node name="BackgroundSong3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_lgqki")
+volume_db = -25.0
+
+[node name="Grass" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_r0t3w")
+volume_db = -10.0
+pitch_scale = 0.7

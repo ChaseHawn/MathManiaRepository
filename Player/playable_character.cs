@@ -7,12 +7,14 @@ public partial class playable_character : CharacterBody2D
 {
 	int speed = 80;
 	string player_state;
+	private AudioStreamPlayer Grass;
 	private AnimatedSprite2D AnimatedSprite;
 
 	public override void _Ready()
 	{
 		// 
 		AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		Grass = GetNode<AudioStreamPlayer>("/root/World1/Grass");
 	}
 	
 	public override void _PhysicsProcess(double delta)
@@ -38,6 +40,7 @@ public partial class playable_character : CharacterBody2D
   		if (player_state == "idle")
 		{
 			AnimatedSprite.Play("idle");
+			Grass.Play();
 		}
 		if (player_state == "walking")
 		{
