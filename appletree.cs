@@ -23,7 +23,7 @@ public partial class appletree : Node2D
 
 	public void NewRandomGrowthTime(){
 		var rand = new Random();
-		var randGrowthTime = rand.Next(10, 15);
+		var randGrowthTime = rand.Next(60, 120);
 		growthTimer.WaitTime = randGrowthTime;
 
 		if(state == "without_apples"){
