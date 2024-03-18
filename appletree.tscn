@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://gfxtg6ogmo7m"]
+
+[ext_resource type="Texture2D" uid="uid://brhp6b3q5aa0d" path="res://art/world1/AppleTree_WIP_SpriteSheet.png" id="1_b64wr"]
+[ext_resource type="Script" path="res://appletree.cs" id="1_sxfwu"]
+[ext_resource type="AudioStream" uid="uid://fmwu5vf6nc26" path="res://sfx/75521-Work_boot_footsteps_single_step_right_on_leaves-BLASTWAVEFX-10159.wav" id="3_0gons"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chyhj"]
+atlas = ExtResource("1_b64wr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pnyu"]
+atlas = ExtResource("1_b64wr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_in38f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chyhj")
+}],
+"loop": true,
+"name": &"with_apples",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pnyu")
+}],
+"loop": true,
+"name": &"without_apples",
+"speed": 0.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wejcp"]
+radius = 27.0
+
+[node name="AppleTree" type="Node2D"]
+script = ExtResource("1_sxfwu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_in38f")
+animation = &"without_apples"
+
+[node name="PickableArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableArea"]
+shape = SubResource("CircleShape2D_wejcp")
+
+[node name="GrowthTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="CollectFruit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0gons")
+volume_db = -10.0
+
+[connection signal="body_entered" from="PickableArea" to="." method="OnPickableAreaBodyEntered"]
+[connection signal="body_exited" from="PickableArea" to="." method="OnPickableAreaBodyExited"]
+[connection signal="timeout" from="GrowthTimer" to="." method="OnGrowthTimerTimeout"]
