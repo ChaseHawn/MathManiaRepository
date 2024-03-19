@@ -4,13 +4,13 @@ using System;
 public partial class pause_menu : Control
 {
 	[Export]
-	public world1_game World1;
+	public world_game World;
 
 	public override void _Ready()
 	{	
 		Hide();
-		var world1Node = GetNode<world1_game>("/root/World1");
-		world1Node.Connect("ToggleGamePaused", new Callable(this, MethodName.OnToggleGamePaused));
+		var worldNode = GetNode<world_game>("/root/World");
+		worldNode.Connect("ToggleGamePaused", new Callable(this, MethodName.OnToggleGamePaused));
 	}
 
 	public void OnToggleGamePaused(bool isPaused)
@@ -27,9 +27,9 @@ public partial class pause_menu : Control
 	public void OnResumeButtonPressed()
 	{
 		// The game is resumed when the resume button is pressed.
-		var world1Node = GetNode<world1_game>("/root/World1");
-		World1 = world1Node;
-        World1.gamePaused = false;
+		var worldNode = GetNode<world_game>("/root/World");
+		World = worldNode;
+        World.gamePaused = false;
 	}
 
 	public void OnVolumeButtonPressed()

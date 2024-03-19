@@ -14,7 +14,7 @@ public partial class playable_character : CharacterBody2D
 	{
 		// 
 		AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-		Grass = GetNode<AudioStreamPlayer>("/root/World1/Grass");
+		Grass = GetNode<AudioStreamPlayer>("/root/World/Grass");
 	}
 	
 	public override void _PhysicsProcess(double delta)

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class appletree : Node2D
+public partial class apple_tree : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
 

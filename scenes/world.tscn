@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/world_game.cs" id="1_ea4v0"]
 [ext_resource type="PackedScene" uid="uid://gfxtg6ogmo7m" path="res://scenes/appletree.tscn" id="2_c4ej8"]
-[ext_resource type="PackedScene" uid="uid://qaaxecolyapg" path="res://player/player.tscn" id="3_nhxn4"]
+[ext_resource type="PackedScene" uid="uid://qaaxecolyapg" path="res://scenes/player.tscn" id="3_nhxn4"]
 [ext_resource type="Texture2D" uid="uid://c6dtetmlamxxt" path="res://art/world/World1TileMap_WIP.png" id="4_7mmxx"]
 [ext_resource type="PackedScene" uid="uid://ctam0c8rbrdpt" path="res://scenes/pausemenu.tscn" id="5_y1hyc"]
 [ext_resource type="AudioStream" uid="uid://dtbeutm0k6lp0" path="res://music/Pixel 12.mp3" id="6_rjoka"]
@@ -79,7 +79,7 @@ texture = ExtResource("4_7mmxx")
 [sub_resource type="TileSet" id="TileSet_ptwyg"]
 sources/0 = SubResource("TileSetAtlasSource_xny61")
 
-[node name="World1" type="Node2D"]
+[node name="World" type="Node2D"]
 script = ExtResource("1_ea4v0")
 
 [node name="AppleTree" parent="." instance=ExtResource("2_c4ej8")]

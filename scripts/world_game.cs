@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Threading.Tasks;
 
-public partial class world1_game : Node2D
+public partial class world_game : Node2D
 {
 	private AudioStreamPlayer backgroundSong1;
 	private AudioStreamPlayer backgroundSong2;

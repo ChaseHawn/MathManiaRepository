@@ -34,7 +34,7 @@ public partial class main : Control
 	{
 		// When the ClickSound audio is finished playing, it will change to the world1 scene or quit the game depending on which button the player pressed.
 		if (flag == true){
-			GetTree().ChangeSceneToFile("res://world1.tscn");
+			GetTree().ChangeSceneToFile("res://scenes/world.tscn");
 		}
 		else {
 			GetTree().Quit();
