@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://4hdw6iipuhn2"]
 
-[ext_resource type="Texture2D" uid="uid://b50jokbsb0chv" path="res://art/world/OrangeTree_WIP_SpriteSheet.png" id="1_2ypkh"]
-[ext_resource type="Script" path="res://scripts/orange_tree.cs" id="1_tfgga"]
+[ext_resource type="Script" path="res://scripts/orange_tree.cs" id="1_m524c"]
+[ext_resource type="Texture2D" uid="uid://b50jokbsb0chv" path="res://art/world/OrangeTree_WIP_SpriteSheet.png" id="2_tn4s8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0sys"]
-atlas = ExtResource("1_2ypkh")
+atlas = ExtResource("2_tn4s8")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_udidi"]
-atlas = ExtResource("1_2ypkh")
+atlas = ExtResource("2_tn4s8")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c6cd3"]
@@ -34,7 +34,7 @@ animations = [{
 radius = 25.0
 
 [node name="OrangeTree" type="Node2D"]
-script = ExtResource("1_tfgga")
+script = ExtResource("1_m524c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_c6cd3")
@@ -51,3 +51,4 @@ shape = SubResource("CircleShape2D_vxhok")
 
 [connection signal="body_entered" from="PickableArea" to="." method="OnPickableAreaBodyEntered"]
 [connection signal="body_exited" from="PickableArea" to="." method="OnPickableAreaBodyExited"]
+[connection signal="timeout" from="GrowthTimer" to="." method="OnGrowthTimerTimeout"]
