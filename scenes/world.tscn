@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3hijh78b1acc"]
+[gd_scene load_steps=15 format=3 uid="uid://d3hijh78b1acc"]
 
 [ext_resource type="Script" path="res://scripts/world_game.cs" id="1_ea4v0"]
 [ext_resource type="PackedScene" uid="uid://gfxtg6ogmo7m" path="res://scenes/appletree.tscn" id="2_c4ej8"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://c1pkux7hk1bds" path="res://music/Pixel 9.mp3" id="7_3e7sb"]
 [ext_resource type="AudioStream" uid="uid://c8yx37sjrygkt" path="res://music/Pixel 11.mp3" id="8_ulk4c"]
 [ext_resource type="AudioStream" uid="uid://drynd0lp00drs" path="res://sfx/run.mp3" id="9_5amnu"]
+[ext_resource type="PackedScene" uid="uid://4hdw6iipuhn2" path="res://scenes/orangetree.tscn" id="10_76sg0"]
 
 [sub_resource type="Shader" id="Shader_4mpgc"]
 code = "shader_type spatial;
@@ -87,6 +88,9 @@ position = Vector2(2, -49)
 
 [node name="AppleTree2" parent="." instance=ExtResource("2_c4ej8")]
 position = Vector2(102, -65)
+
+[node name="OrangeTree" parent="." instance=ExtResource("10_76sg0")]
+position = Vector2(-85, -20)
 
 [node name="ManSprite" parent="." instance=ExtResource("3_nhxn4")]
 

@@ -61,6 +61,7 @@ public partial class world_game : Node2D
 			EmitSignal("ToggleGamePaused", _gamePaused);
 		}
 	}
+	
 	public override void _UnhandledInput(InputEvent @event)
 	{
 		if (@event is InputEventKey eventKey){
@@ -69,6 +70,4 @@ public partial class world_game : Node2D
 			}
 		}
 	}
-
-	
 }
