@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6dtetmlamxxt"
-path="res://.godot/imported/World1TileMap_WIP.png-19f742e0077bb4729297c93a89e349f2.ctex"
+uid="uid://brhp6b3q5aa0d"
+path="res://.godot/imported/AppleTree_WIP_SpriteSheet.png-4ac7928c320f6b60db24b41a13ddb9a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/world1/World1TileMap_WIP.png"
-dest_files=["res://.godot/imported/World1TileMap_WIP.png-19f742e0077bb4729297c93a89e349f2.ctex"]
+source_file="res://art/world/AppleTree_WIP_SpriteSheet.png"
+dest_files=["res://.godot/imported/AppleTree_WIP_SpriteSheet.png-4ac7928c320f6b60db24b41a13ddb9a6.ctex"]
 
 [params]
 

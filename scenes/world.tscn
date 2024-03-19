@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=3 uid="uid://d3hijh78b1acc"]
 
-[ext_resource type="Script" path="res://world1_game.cs" id="1_2q8fa"]
-[ext_resource type="PackedScene" uid="uid://qaaxecolyapg" path="res://player/player.tscn" id="1_4tj1i"]
-[ext_resource type="Texture2D" uid="uid://c6dtetmlamxxt" path="res://art/world1/World1TileMap_WIP.png" id="3_4pq40"]
-[ext_resource type="PackedScene" uid="uid://ctam0c8rbrdpt" path="res://pausemenu.tscn" id="3_7w4ni"]
-[ext_resource type="AudioStream" uid="uid://dtbeutm0k6lp0" path="res://music/Pixel 12.mp3" id="5_p1h2u"]
-[ext_resource type="AudioStream" uid="uid://c1pkux7hk1bds" path="res://music/Pixel 9.mp3" id="6_pux4m"]
-[ext_resource type="AudioStream" uid="uid://c8yx37sjrygkt" path="res://music/Pixel 11.mp3" id="7_lgqki"]
-[ext_resource type="AudioStream" uid="uid://drynd0lp00drs" path="res://sfx/run.mp3" id="8_r0t3w"]
-[ext_resource type="PackedScene" uid="uid://gfxtg6ogmo7m" path="res://AppleTree.tscn" id="9_5v501"]
+[ext_resource type="Script" path="res://scripts/world_game.cs" id="1_ea4v0"]
+[ext_resource type="PackedScene" uid="uid://gfxtg6ogmo7m" path="res://scenes/appletree.tscn" id="2_c4ej8"]
+[ext_resource type="PackedScene" uid="uid://qaaxecolyapg" path="res://player/player.tscn" id="3_nhxn4"]
+[ext_resource type="Texture2D" uid="uid://c6dtetmlamxxt" path="res://art/world/World1TileMap_WIP.png" id="4_7mmxx"]
+[ext_resource type="PackedScene" uid="uid://ctam0c8rbrdpt" path="res://scenes/pausemenu.tscn" id="5_y1hyc"]
+[ext_resource type="AudioStream" uid="uid://dtbeutm0k6lp0" path="res://music/Pixel 12.mp3" id="6_rjoka"]
+[ext_resource type="AudioStream" uid="uid://c1pkux7hk1bds" path="res://music/Pixel 9.mp3" id="7_3e7sb"]
+[ext_resource type="AudioStream" uid="uid://c8yx37sjrygkt" path="res://music/Pixel 11.mp3" id="8_ulk4c"]
+[ext_resource type="AudioStream" uid="uid://drynd0lp00drs" path="res://sfx/run.mp3" id="9_5amnu"]
 
 [sub_resource type="Shader" id="Shader_4mpgc"]
 code = "shader_type spatial;
@@ -46,7 +46,7 @@ shader_parameter/amount = null
 shader_parameter/other_color = Color(1, 1, 1, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xny61"]
-texture = ExtResource("3_4pq40")
+texture = ExtResource("4_7mmxx")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -80,15 +80,15 @@ texture = ExtResource("3_4pq40")
 sources/0 = SubResource("TileSetAtlasSource_xny61")
 
 [node name="World1" type="Node2D"]
-script = ExtResource("1_2q8fa")
+script = ExtResource("1_ea4v0")
 
-[node name="AppleTree" parent="." instance=ExtResource("9_5v501")]
+[node name="AppleTree" parent="." instance=ExtResource("2_c4ej8")]
 position = Vector2(2, -49)
 
-[node name="AppleTree2" parent="." instance=ExtResource("9_5v501")]
+[node name="AppleTree2" parent="." instance=ExtResource("2_c4ej8")]
 position = Vector2(102, -65)
 
-[node name="ManSprite" parent="." instance=ExtResource("1_4tj1i")]
+[node name="ManSprite" parent="." instance=ExtResource("3_nhxn4")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
@@ -109,21 +109,21 @@ layer_2/tile_data = PackedInt32Array()
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_7w4ni")]
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_y1hyc")]
 
 [node name="BackgroundSong1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_p1h2u")
+stream = ExtResource("6_rjoka")
 volume_db = -25.0
 
 [node name="BackgroundSong2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_pux4m")
+stream = ExtResource("7_3e7sb")
 volume_db = -25.0
 
 [node name="BackgroundSong3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_lgqki")
+stream = ExtResource("8_ulk4c")
 volume_db = -25.0
 
 [node name="Grass" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_r0t3w")
+stream = ExtResource("9_5amnu")
 volume_db = -10.0
 pitch_scale = 0.65

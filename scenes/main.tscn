@@ -1,8 +1,8 @@
 [gd_scene load_steps=39 format=3 uid="uid://dpva7rrhparqd"]
 
-[ext_resource type="Script" path="res://main.cs" id="1_yxr3g"]
+[ext_resource type="Script" path="res://scripts/main.cs" id="1_yxr3g"]
 [ext_resource type="Texture2D" uid="uid://de8o2i0vundit" path="res://art/menus/MathManiaMenuTitle-Sheet.png" id="2_l17u5"]
-[ext_resource type="Script" path="res://animated_menu_title.cs" id="3_krojf"]
+[ext_resource type="Script" path="res://scripts/animated_menu_title.cs" id="3_krojf"]
 [ext_resource type="Texture2D" uid="uid://bl0ronrje6bw8" path="res://art/menus/ContinueButtonNormal.png" id="4_7odh3"]
 [ext_resource type="Texture2D" uid="uid://c3ydnq4p36ay0" path="res://art/menus/ContinueButtonDown.png" id="5_ee87x"]
 [ext_resource type="Texture2D" uid="uid://da2m0fd1oikat" path="res://art/menus/ContinueButtonHover.png" id="6_ccae8"]
@@ -12,7 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://celff674ktcl2" path="res://sfx/continuesfx.wav" id="10_54ckt"]
 [ext_resource type="AudioStream" uid="uid://ugailylijy5l" path="res://music/waiting-time-175800.mp3" id="11_bf7is"]
 [ext_resource type="FontFile" uid="uid://c7f3tn5rjhwys" path="res://fonts/casio-fx-9860gii.ttf" id="12_6s07v"]
-[ext_resource type="PackedScene" uid="uid://dk8u50ay2dvo6" path="res://parallaxbackground.tscn" id="13_1s5p5"]
+[ext_resource type="PackedScene" uid="uid://dk8u50ay2dvo6" path="res://scenes/parallaxbackground.tscn" id="13_1s5p5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h5ppu"]
 atlas = ExtResource("2_l17u5")

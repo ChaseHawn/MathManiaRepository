@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brhp6b3q5aa0d"
-path="res://.godot/imported/AppleTree_WIP_SpriteSheet.png-f194c23f8bea5fc1470dc2785c5f6bae.ctex"
+uid="uid://co3npq2qxg62p"
+path="res://.godot/imported/RaspberryTree_WIP_SpriteSheet.png-342b0d2d3dc5fbe905dd210d2edd4076.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/world1/AppleTree_WIP_SpriteSheet.png"
-dest_files=["res://.godot/imported/AppleTree_WIP_SpriteSheet.png-f194c23f8bea5fc1470dc2785c5f6bae.ctex"]
+source_file="res://art/world/RaspberryTree_WIP_SpriteSheet.png"
+dest_files=["res://.godot/imported/RaspberryTree_WIP_SpriteSheet.png-342b0d2d3dc5fbe905dd210d2edd4076.ctex"]
 
 [params]
 

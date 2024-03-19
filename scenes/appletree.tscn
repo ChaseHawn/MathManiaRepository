@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://gfxtg6ogmo7m"]
 
-[ext_resource type="Texture2D" uid="uid://brhp6b3q5aa0d" path="res://art/world1/AppleTree_WIP_SpriteSheet.png" id="1_b64wr"]
-[ext_resource type="Script" path="res://appletree.cs" id="1_sxfwu"]
+[ext_resource type="Texture2D" uid="uid://brhp6b3q5aa0d" path="res://art/world/AppleTree_WIP_SpriteSheet.png" id="1_b64wr"]
+[ext_resource type="Script" path="res://scripts/apple_tree.cs" id="1_sxfwu"]
 [ext_resource type="AudioStream" uid="uid://fmwu5vf6nc26" path="res://sfx/75521-Work_boot_footsteps_single_step_right_on_leaves-BLASTWAVEFX-10159.wav" id="3_0gons"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_chyhj"]

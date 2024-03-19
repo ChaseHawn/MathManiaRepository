@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b50jokbsb0chv"
-path="res://.godot/imported/OrangeTree_WIP_SpriteSheet.png-35f1a2ef44fd7166f0aaa8fff0428487.ctex"
+path="res://.godot/imported/OrangeTree_WIP_SpriteSheet.png-2af4d78ba9bde394e919a81d7bf99ed8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/world1/OrangeTree_WIP_SpriteSheet.png"
-dest_files=["res://.godot/imported/OrangeTree_WIP_SpriteSheet.png-35f1a2ef44fd7166f0aaa8fff0428487.ctex"]
+source_file="res://art/world/OrangeTree_WIP_SpriteSheet.png"
+dest_files=["res://.godot/imported/OrangeTree_WIP_SpriteSheet.png-2af4d78ba9bde394e919a81d7bf99ed8.ctex"]
 
 [params]
 
