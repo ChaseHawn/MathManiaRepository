@@ -84,13 +84,10 @@ sources/0 = SubResource("TileSetAtlasSource_xny61")
 script = ExtResource("1_ea4v0")
 
 [node name="AppleTree" parent="." instance=ExtResource("2_c4ej8")]
-position = Vector2(2, -49)
-
-[node name="AppleTree2" parent="." instance=ExtResource("2_c4ej8")]
-position = Vector2(102, -65)
+position = Vector2(9, -59)
 
 [node name="OrangeTree" parent="." instance=ExtResource("10_76sg0")]
-position = Vector2(-85, -20)
+position = Vector2(64, -60)
 
 [node name="ManSprite" parent="." instance=ExtResource("3_nhxn4")]
 
