@@ -15,6 +15,10 @@ public partial class playable_character : CharacterBody2D
 		// 
 		AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		Grass = GetNode<AudioStreamPlayer>("/root/World/Grass");
+
+		Godot.Vector2 currentPosition = Position;
+		currentPosition.X += 100;
+		Position = currentPosition;
 	}
 	
 	public override void _PhysicsProcess(double delta)
