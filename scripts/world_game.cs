@@ -11,9 +11,13 @@ public partial class world_game : Node2D
 	private AudioStreamPlayer backgroundSong2;
 	private AudioStreamPlayer backgroundSong3;
 	private bool _gamePaused = false;
+	private bool _gameInventory = false;
 
 	[Signal]
 	public delegate	void ToggleGamePausedEventHandler(bool isPaused);
+
+	[Signal]
+	public delegate	void ToggleGameInventoryEventHandler(bool inInventory);
 	
 	public override async void _Ready()
     {
@@ -61,12 +65,28 @@ public partial class world_game : Node2D
 			EmitSignal("ToggleGamePaused", _gamePaused);
 		}
 	}
-	
+
+	public bool gameInventory
+	{
+		get{
+			return _gameInventory;
+		}
+		set{
+			_gameInventory = value;
+			EmitSignal("ToggleGameInventory", _gameInventory);
+		}
+	}
+
 	public override void _UnhandledInput(InputEvent @event)
 	{
 		if (@event is InputEventKey eventKey){
 			if (eventKey.Pressed && eventKey.Keycode == Key.Escape){
-				gamePaused = !gamePaused;
+				if (gameInventory == false){
+					gamePaused = !gamePaused;
+				}
+			}
+			else if (eventKey.Pressed && eventKey.Keycode == Key.Q){
+				gameInventory = !gameInventory;
 			}
 		}
 	}

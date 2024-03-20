@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d3hijh78b1acc"]
+[gd_scene load_steps=16 format=3 uid="uid://d3hijh78b1acc"]
 
 [ext_resource type="Script" path="res://scripts/world_game.cs" id="1_ea4v0"]
 [ext_resource type="PackedScene" uid="uid://gfxtg6ogmo7m" path="res://scenes/appletree.tscn" id="2_c4ej8"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ctam0c8rbrdpt" path="res://scenes/pausemenu.tscn" id="5_y1hyc"]
 [ext_resource type="AudioStream" uid="uid://dtbeutm0k6lp0" path="res://music/Pixel 12.mp3" id="6_rjoka"]
 [ext_resource type="AudioStream" uid="uid://c1pkux7hk1bds" path="res://music/Pixel 9.mp3" id="7_3e7sb"]
+[ext_resource type="PackedScene" uid="uid://dg6jsvs0inxx6" path="res://scenes/inventory.tscn" id="7_lo6uk"]
 [ext_resource type="AudioStream" uid="uid://c8yx37sjrygkt" path="res://music/Pixel 11.mp3" id="8_ulk4c"]
 [ext_resource type="AudioStream" uid="uid://drynd0lp00drs" path="res://sfx/run.mp3" id="9_5amnu"]
 [ext_resource type="PackedScene" uid="uid://4hdw6iipuhn2" path="res://scenes/orangetree.tscn" id="10_76sg0"]
@@ -49,35 +50,93 @@ shader_parameter/other_color = Color(1, 1, 1, 1)
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xny61"]
 texture = ExtResource("4_7mmxx")
 0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
 3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
 4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
 5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
 6:0/0 = 0
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
 0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
 1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
 2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
 3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
 4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
 5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
 6:1/0 = 0
+6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:1/0/physics_layer_0/angular_velocity = 0.0
 0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
 1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
 2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
 3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
 4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
 5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
 6:2/0 = 0
+6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/0/physics_layer_0/angular_velocity = 0.0
 4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
 5:3/0 = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
 6:3/0 = 0
-2:4/0 = 0
+6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:3/0/physics_layer_0/angular_velocity = 0.0
 4:4/0 = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
 5:4/0 = 0
+5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:4/0/physics_layer_0/angular_velocity = 0.0
 6:4/0 = 0
+6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
 
 [sub_resource type="TileSet" id="TileSet_ptwyg"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_xny61")
 
 [node name="World" type="Node2D"]
@@ -94,7 +153,7 @@ position = Vector2(64, -60)
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." groups=["fakegrass"]]
 material = SubResource("ShaderMaterial_bidw8")
 scale = Vector2(1.0192, 0.987579)
 tile_set = SubResource("TileSet_ptwyg")
@@ -111,6 +170,8 @@ layer_2/tile_data = PackedInt32Array()
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_y1hyc")]
+
+[node name="InventoryMenu" parent="CanvasLayer" instance=ExtResource("7_lo6uk")]
 
 [node name="BackgroundSong1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_rjoka")

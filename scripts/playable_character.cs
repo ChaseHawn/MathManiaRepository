@@ -5,7 +5,7 @@ using System.Reflection.PortableExecutable;
 
 public partial class playable_character : CharacterBody2D
 {
-	int speed = 80;
+	int speed = 70;
 	string player_state;
 	private AudioStreamPlayer Grass;
 	private AnimatedSprite2D AnimatedSprite;
@@ -19,6 +19,7 @@ public partial class playable_character : CharacterBody2D
 		Godot.Vector2 currentPosition = Position;
 		currentPosition.X += 100;
 		Position = currentPosition;
+		
 	}
 	
 	public override void _PhysicsProcess(double delta)
@@ -82,5 +83,18 @@ public partial class playable_character : CharacterBody2D
 					AnimatedSprite.Play("se-walk");
 				}
 		}
+	}
+
+	public void OnArea2DBodyEntered(Node body)
+	{
+		if (body.IsInGroup("fakegrass")){
+			GD.Print("Touching");
+			CallDeferred(nameof(DifferedSceneChange));
+		}
+	}
+
+	public void DifferedSceneChange()
+	{
+		GetTree().ChangeSceneToFile("res://scenes/battle.tscn");
 	}
 }
