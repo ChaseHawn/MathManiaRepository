@@ -147,6 +147,7 @@ position = Vector2(-5, -54)
 
 [node name="OrangeTree" parent="." instance=ExtResource("10_76sg0")]
 position = Vector2(64, -60)
+scale = Vector2(0.906395, 1.00469)
 
 [node name="ManSprite" parent="." instance=ExtResource("3_nhxn4")]
 

@@ -20,7 +20,7 @@ public partial class world_game : Node2D
 	public delegate	void ToggleGameInventoryEventHandler(bool inInventory);
 	
 	public override async void _Ready()
-    {
+	{
 		// Background music audio is retrieved.
 		backgroundSong1 = GetNode<AudioStreamPlayer>("BackgroundSong1");
 		backgroundSong2 = GetNode<AudioStreamPlayer>("BackgroundSong2");
@@ -28,11 +28,11 @@ public partial class world_game : Node2D
 
 		// A list of background music audio that may play during a user's session in World 1.
 		List<AudioStreamPlayer> musicList = new List<AudioStreamPlayer>
-        {
-            backgroundSong1,
+		{
+			backgroundSong1,
 			backgroundSong2,
 			backgroundSong3,
-        };
+		};
 
 		// A while loop that plays songs in an unspecified order.
 		while(true){
@@ -52,7 +52,7 @@ public partial class world_game : Node2D
 				}
 			}
 		}
-    }
+	}
 
 	public bool gamePaused
 	{
