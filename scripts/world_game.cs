@@ -35,7 +35,7 @@ public partial class world_game : Node2D
 	/// <summary>
 	/// A list of background music that might be played during a user's session in the world scene.
 	/// </summary>
-	public void BackgroundMusicPlaylist()
+	public async void BackgroundMusicPlaylist()
 	{
 		// List of background songs.
 		List<AudioStreamPlayer> musicList = new List<AudioStreamPlayer>
@@ -59,7 +59,7 @@ public partial class world_game : Node2D
 					// Converts the song length from seconds to milliseconds to be compatible with Task.Delay. Loop is delayed until the song finishes. 
 					int songLengthSeconds = (int)song.Stream.GetLength();
 					int songLengthMilliseconds = (songLengthSeconds * 1000) + 3000;
-					Task.Delay(songLengthMilliseconds);
+					await Task.Delay(songLengthMilliseconds);
 				}
 			}
 		}
