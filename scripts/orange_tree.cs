@@ -3,10 +3,8 @@ using System;
 
 public partial class orange_tree : Node2D
 {
-	// Called when the node enters the scene tree for the first time.
-
 	string state = "without_oranges";
-	bool player_in_area = false;
+	bool playerInArea = false;
 
 	public Timer growthTimer;
 	public AnimatedSprite2D animatedSprite2D;
@@ -31,7 +29,6 @@ public partial class orange_tree : Node2D
 		}
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		if (state == "without_oranges"){
@@ -39,7 +36,7 @@ public partial class orange_tree : Node2D
 		}
 		else {
 			animatedSprite2D.Play("with_oranges");
-			if (player_in_area == true){
+			if (playerInArea == true){
 				if (Input.IsActionJustPressed("e")){
 					state = "without_oranges";
 					collectFruit.Play();
@@ -51,12 +48,12 @@ public partial class orange_tree : Node2D
 
 	public void OnPickableAreaBodyEntered(playable_character playable_Character)
 	{
-		player_in_area = true;
+		playerInArea = true;
 	}
 
 	public void OnPickableAreaBodyExited(playable_character playable_Character)
 	{
-		player_in_area = false;
+		playerInArea = false;
 	}
 
 	public void OnGrowthTimerTimeout()
