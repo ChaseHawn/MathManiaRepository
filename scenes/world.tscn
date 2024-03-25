@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d3hijh78b1acc"]
+[gd_scene load_steps=32 format=3 uid="uid://d3hijh78b1acc"]
 
 [ext_resource type="Script" path="res://scripts/world_game.cs" id="1_ea4v0"]
 [ext_resource type="PackedScene" uid="uid://gfxtg6ogmo7m" path="res://scenes/appletree.tscn" id="2_c4ej8"]
@@ -11,6 +11,22 @@
 [ext_resource type="AudioStream" uid="uid://c8yx37sjrygkt" path="res://music/Pixel 11.mp3" id="8_ulk4c"]
 [ext_resource type="AudioStream" uid="uid://drynd0lp00drs" path="res://sfx/run.mp3" id="9_5amnu"]
 [ext_resource type="PackedScene" uid="uid://4hdw6iipuhn2" path="res://scenes/orangetree.tscn" id="10_76sg0"]
+[ext_resource type="Texture2D" uid="uid://f8mjjkcu2ljq" path="res://art/items/Helmet.png" id="12_at4dm"]
+[ext_resource type="Texture2D" uid="uid://dren0jukhkya4" path="res://art/items/Chestplate.png" id="13_i6uji"]
+[ext_resource type="Texture2D" uid="uid://ckt7q3fe8yvv4" path="res://art/items/Boots.png" id="14_l3dl7"]
+[ext_resource type="Texture2D" uid="uid://b36l3wytiqxaw" path="res://art/items/Staff.png" id="15_dg3v0"]
+[ext_resource type="Texture2D" uid="uid://dc1nmgoulm8sk" path="res://art/items/StrengthPotion.png" id="16_ai5r2"]
+[ext_resource type="Texture2D" uid="uid://b5rjeyof8rapj" path="res://art/items/TimePotion.png" id="17_ktnoh"]
+[ext_resource type="Texture2D" uid="uid://cspllo3vnl5cb" path="res://art/items/MysteryPotion.png" id="18_qcxih"]
+[ext_resource type="Texture2D" uid="uid://b0sjfru1iyoqr" path="res://art/items/CaptureCapsule.png" id="19_0p0cp"]
+[ext_resource type="Texture2D" uid="uid://fh5hxq7uaw88" path="res://art/items/HealthPotion.png" id="20_4p06h"]
+[ext_resource type="Texture2D" uid="uid://db4b7xyx4gjph" path="res://art/items/IronSword.png" id="21_p5ij4"]
+[ext_resource type="Texture2D" uid="uid://dgk2uycryk3py" path="res://art/items/Apple.png" id="22_bcf37"]
+[ext_resource type="Texture2D" uid="uid://bskbjsvysob0d" path="res://art/items/Orange.png" id="23_2e1ll"]
+[ext_resource type="Texture2D" uid="uid://dftojh4mvgqi2" path="res://art/items/Coconut.png" id="24_76s05"]
+[ext_resource type="Texture2D" uid="uid://lwdcdegivy6m" path="res://art/items/Raspberry.png" id="25_nh5tl"]
+[ext_resource type="Texture2D" uid="uid://cyi0qsnmftrdn" path="res://art/items/Key.png" id="26_gl3qm"]
+[ext_resource type="Texture2D" uid="uid://cx2xve5lvlad0" path="res://art/items/Bow.png" id="27_rj6yq"]
 
 [sub_resource type="Shader" id="Shader_4mpgc"]
 code = "shader_type spatial;
@@ -189,3 +205,67 @@ volume_db = -25.0
 stream = ExtResource("9_5amnu")
 volume_db = -10.0
 pitch_scale = 0.65
+
+[node name="Helmet" type="Sprite2D" parent="."]
+position = Vector2(-56, 59)
+texture = ExtResource("12_at4dm")
+
+[node name="Chestplate" type="Sprite2D" parent="."]
+position = Vector2(-56, 77)
+texture = ExtResource("13_i6uji")
+
+[node name="Boots" type="Sprite2D" parent="."]
+position = Vector2(-56, 95)
+texture = ExtResource("14_l3dl7")
+
+[node name="Staff" type="Sprite2D" parent="."]
+position = Vector2(-28, 59)
+texture = ExtResource("15_dg3v0")
+
+[node name="StrengthPotion" type="Sprite2D" parent="."]
+position = Vector2(-28, 77)
+texture = ExtResource("16_ai5r2")
+
+[node name="TimePotion" type="Sprite2D" parent="."]
+position = Vector2(-28, 94)
+texture = ExtResource("17_ktnoh")
+
+[node name="MysteryPotion" type="Sprite2D" parent="."]
+position = Vector2(-9, 94)
+texture = ExtResource("18_qcxih")
+
+[node name="CaptureCapsule" type="Sprite2D" parent="."]
+position = Vector2(-9, 77)
+texture = ExtResource("19_0p0cp")
+
+[node name="HealthPotion" type="Sprite2D" parent="."]
+position = Vector2(10, 94)
+texture = ExtResource("20_4p06h")
+
+[node name="IronSword" type="Sprite2D" parent="."]
+position = Vector2(-9, 59)
+texture = ExtResource("21_p5ij4")
+
+[node name="Apple" type="Sprite2D" parent="."]
+position = Vector2(10, 76)
+texture = ExtResource("22_bcf37")
+
+[node name="Orange" type="Sprite2D" parent="."]
+position = Vector2(10, 59)
+texture = ExtResource("23_2e1ll")
+
+[node name="Coconut" type="Sprite2D" parent="."]
+position = Vector2(29, 59)
+texture = ExtResource("24_76s05")
+
+[node name="Raspberry" type="Sprite2D" parent="."]
+position = Vector2(29, 76)
+texture = ExtResource("25_nh5tl")
+
+[node name="Key" type="Sprite2D" parent="."]
+position = Vector2(29, 94)
+texture = ExtResource("26_gl3qm")
+
+[node name="Bow" type="Sprite2D" parent="."]
+position = Vector2(47, 59)
+texture = ExtResource("27_rj6yq")
