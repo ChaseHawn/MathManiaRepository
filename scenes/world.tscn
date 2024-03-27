@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://gfxtg6ogmo7m" path="res://scenes/appletree.tscn" id="2_c4ej8"]
 [ext_resource type="PackedScene" uid="uid://qaaxecolyapg" path="res://scenes/player.tscn" id="3_nhxn4"]
 [ext_resource type="Texture2D" uid="uid://c6dtetmlamxxt" path="res://art/world/World1TileMap_WIP.png" id="4_7mmxx"]
+[ext_resource type="PackedScene" uid="uid://b526p0c0umggo" path="res://scenes/waypointpillar.tscn" id="4_rgavh"]
 [ext_resource type="PackedScene" uid="uid://ctam0c8rbrdpt" path="res://scenes/pausemenu.tscn" id="5_y1hyc"]
 [ext_resource type="AudioStream" uid="uid://dtbeutm0k6lp0" path="res://music/Pixel 12.mp3" id="6_rjoka"]
 [ext_resource type="AudioStream" uid="uid://c1pkux7hk1bds" path="res://music/Pixel 9.mp3" id="7_3e7sb"]
@@ -27,7 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://lwdcdegivy6m" path="res://art/items/Raspberry.png" id="25_nh5tl"]
 [ext_resource type="Texture2D" uid="uid://cyi0qsnmftrdn" path="res://art/items/Key.png" id="26_gl3qm"]
 [ext_resource type="Texture2D" uid="uid://cx2xve5lvlad0" path="res://art/items/Bow.png" id="27_rj6yq"]
-[ext_resource type="PackedScene" uid="uid://b526p0c0umggo" path="res://scenes/waypointpillar.tscn" id="28_pbrb8"]
 
 [sub_resource type="Shader" id="Shader_4mpgc"]
 code = "shader_type spatial;
@@ -162,10 +162,13 @@ size = Vector2(16, 16)
 script = ExtResource("1_ea4v0")
 
 [node name="AppleTree" parent="." instance=ExtResource("2_c4ej8")]
-position = Vector2(27, -54)
+position = Vector2(3, -62)
 
 [node name="OrangeTree" parent="." instance=ExtResource("10_76sg0")]
-position = Vector2(64, -60)
+position = Vector2(55, -62)
+
+[node name="WaypointPillar" parent="." instance=ExtResource("4_rgavh")]
+position = Vector2(103, -55)
 
 [node name="ManSprite" parent="." instance=ExtResource("3_nhxn4")]
 
