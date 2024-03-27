@@ -24,13 +24,13 @@ public partial class world_game : Node2D
 	/// Retrieves background songs and calls the method that plays them.
 	/// </summary>
 	public override void _Ready()
-    {
+	{
 		backgroundSong1 = GetNode<AudioStreamPlayer>("BackgroundSong1");
 		backgroundSong2 = GetNode<AudioStreamPlayer>("BackgroundSong2");
 		backgroundSong3 = GetNode<AudioStreamPlayer>("BackgroundSong3");
 		
 		BackgroundMusicPlaylist();
-    }
+	}
 
 	/// <summary>
 	/// A list of background music that might be played during a user's session in the world scene.

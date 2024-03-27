@@ -1,10 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://bir7jjfurmr7i"]
+[gd_scene load_steps=7 format=3 uid="uid://bir7jjfurmr7i"]
 
+[ext_resource type="Script" path="res://scenes/BattleUI.gd" id="1_63hvv"]
 [ext_resource type="Texture2D" uid="uid://c3cua1frrw13e" path="res://scenes/Background.png" id="1_akevh"]
 [ext_resource type="Texture2D" uid="uid://cyp6hl848435y" path="res://scenes/Dragon.png" id="2_hdgbr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwv7e"]
 bg_color = Color(1, 0, 0, 0.721569)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6apc"]
+bg_color = Color(0, 0, 0, 0.407843)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwqv2"]
+bg_color = Color(0.00392157, 0.00392157, 0.00392157, 0.466667)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
 
 [node name="BattleUI" type="Control"]
 layout_mode = 3
@@ -13,12 +33,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_63hvv")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 4.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.997134, 1.00556)
@@ -27,6 +51,7 @@ size_flags_vertical = 4
 texture = ExtResource("1_akevh")
 
 [node name="Enemy1container" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -44,6 +69,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="ProgressBar" type="ProgressBar" parent="Enemy1container"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
 theme_override_styles/fill = SubResource("StyleBoxFlat_nwv7e")
@@ -51,6 +77,7 @@ value = 50.0
 show_percentage = false
 
 [node name="Label" type="Label" parent="Enemy1container/ProgressBar"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = -2.0
 offset_right = 152.0
@@ -62,49 +89,68 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Enemy" type="Sprite2D" parent="Enemy1container"]
+unique_name_in_owner = true
 position = Vector2(77, 75)
 scale = Vector2(0.777778, 0.864583)
 texture = ExtResource("2_hdgbr")
 
 [node name="OptionsPanel" type="Panel" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -132.0
-offset_bottom = 2.0
+offset_left = 14.0
+offset_top = -143.0
+offset_right = -444.0
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_a6apc")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="OptionsPanel"]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 4.0
-offset_right = 206.0
-offset_bottom = 120.0
+offset_left = 7.0
+offset_top = 51.0
+offset_right = 209.0
+offset_bottom = 82.0
 
 [node name="Attack2" type="Button" parent="OptionsPanel/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 0
 size_flags_vertical = 4
-text = "Attack2
-"
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0.486275, 1)
+theme_override_colors/font_hover_color = Color(1, 0.54902, 0.486275, 1)
+text = "Attack2"
 
 [node name="Attack3" type="Button" parent="OptionsPanel/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
-text = "Attack3"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0.486275, 1)
+theme_override_colors/font_hover_color = Color(1, 0.54902, 0.486275, 1)
+text = "Attack3
+"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel"]
+unique_name_in_owner = true
 layout_mode = 0
-offset_top = 7.0
-offset_right = 208.0
-offset_bottom = 115.0
+offset_left = 74.0
+offset_top = 11.0
+offset_right = 141.0
+offset_bottom = 119.0
 
 [node name="Attack1" type="Button" parent="OptionsPanel/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -115,8 +161,47 @@ theme_override_colors/font_hover_color = Color(1, 0.54902, 0.486275, 1)
 text = "Attack1"
 
 [node name="Attack4" type="Button" parent="OptionsPanel/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0.486275, 1)
+theme_override_colors/font_hover_color = Color(1, 0.54902, 0.486275, 1)
 text = "Attack4
 "
+
+[node name="Textbox1" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 26.0
+offset_top = 10.0
+offset_right = 1126.0
+offset_bottom = 130.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rwqv2")
+
+[node name="LabelText" type="Label" parent="Textbox1"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 5.0
+offset_right = -20.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "text"
+metadata/_edit_use_anchors_ = true
+
+[node name="Ticker" type="Label" parent="Textbox1"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1054.0
+offset_top = 57.0
+offset_right = 1094.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 45
+text = ">"
