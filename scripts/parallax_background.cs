@@ -3,7 +3,7 @@ using System;
 
 public partial class parallax_background : ParallaxBackground
 {
-	public int scrollingSpeed = 1;
+	public float scrollingSpeed = 0.5f;
 
 	/// <summary>
 	/// Parallax background moves horizontally while the menu screen is displayed.

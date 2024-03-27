@@ -9,17 +9,18 @@ public partial class playable_character : CharacterBody2D
 	string player_state;
 	private AudioStreamPlayer Grass;
 	private AnimatedSprite2D AnimatedSprite;
+	private Node2D AppleTree;
 
 	public override void _Ready()
 	{
 		// 
 		AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		Grass = GetNode<AudioStreamPlayer>("/root/World/Grass");
-
-		Godot.Vector2 currentPosition = Position;
-		currentPosition.X += 100;
-		Position = currentPosition;
+		AppleTree = GetNode<Node2D>("/root/World/AppleTree");
 		
+		Godot.Vector2 currentPosition = Position;
+		currentPosition += AppleTree.GlobalPosition;
+		Position = currentPosition;
 	}
 	
 	public override void _PhysicsProcess(double delta)
@@ -65,7 +66,6 @@ public partial class playable_character : CharacterBody2D
 				{
 					AnimatedSprite.Play("w-walk");
 				}
-
 			if (dir.X > 0.5 && dir.Y < -0.5)
 				{
 					AnimatedSprite.Play("ne-walk");
@@ -84,11 +84,9 @@ public partial class playable_character : CharacterBody2D
 				}
 		}
 	}
-
 	public void OnArea2DBodyEntered(Node body)
 	{
 		if (body.IsInGroup("fakegrass")){
-			GD.Print("Touching");
 			CallDeferred(nameof(DifferedSceneChange));
 		}
 	}
