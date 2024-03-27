@@ -88,6 +88,6 @@ public partial class playable_character : CharacterBody2D
 
 	public void DifferedSceneChange()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/battle.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/battle_ui.tscn");
 	}
 }

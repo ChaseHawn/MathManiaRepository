@@ -165,10 +165,7 @@ script = ExtResource("1_ea4v0")
 position = Vector2(27, -54)
 
 [node name="OrangeTree" parent="." instance=ExtResource("10_76sg0")]
-position = Vector2(80, -54)
-
-[node name="WaypointPillar" parent="." instance=ExtResource("28_pbrb8")]
-position = Vector2(128, -46)
+position = Vector2(64, -60)
 
 [node name="ManSprite" parent="." instance=ExtResource("3_nhxn4")]
 
