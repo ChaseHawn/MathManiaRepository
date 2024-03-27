@@ -1,11 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://b526p0c0umggo"]
+[gd_scene load_steps=5 format=3 uid="uid://b526p0c0umggo"]
+
+[ext_resource type="Texture2D" uid="uid://c6dtetmlamxxt" path="res://art/world/World1TileMap_WIP.png" id="1_q3km3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yensi"]
+atlas = ExtResource("1_q3km3")
+region = Rect2(64, 64, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_po0ds"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yensi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_48ktf"]
-radius = 61.0082
+radius = 24.0
 
-[node name="Node2D" type="Node2D"]
+[node name="WaypointPillar" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_po0ds")

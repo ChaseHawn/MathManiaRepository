@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://d3hijh78b1acc"]
+[gd_scene load_steps=34 format=3 uid="uid://d3hijh78b1acc"]
 
 [ext_resource type="Script" path="res://scripts/world_game.cs" id="1_ea4v0"]
 [ext_resource type="PackedScene" uid="uid://gfxtg6ogmo7m" path="res://scenes/appletree.tscn" id="2_c4ej8"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://lwdcdegivy6m" path="res://art/items/Raspberry.png" id="25_nh5tl"]
 [ext_resource type="Texture2D" uid="uid://cyi0qsnmftrdn" path="res://art/items/Key.png" id="26_gl3qm"]
 [ext_resource type="Texture2D" uid="uid://cx2xve5lvlad0" path="res://art/items/Bow.png" id="27_rj6yq"]
+[ext_resource type="PackedScene" uid="uid://b526p0c0umggo" path="res://scenes/waypointpillar.tscn" id="28_pbrb8"]
 
 [sub_resource type="Shader" id="Shader_4mpgc"]
 code = "shader_type spatial;
@@ -149,27 +150,32 @@ texture = ExtResource("4_7mmxx")
 2:4/0 = 0
 2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:4/0/physics_layer_0/angular_velocity = 0.0
-2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
 
 [sub_resource type="TileSet" id="TileSet_ptwyg"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_xny61")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6e83h"]
+size = Vector2(16, 16)
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_ea4v0")
 
 [node name="AppleTree" parent="." instance=ExtResource("2_c4ej8")]
-position = Vector2(-5, -54)
+position = Vector2(27, -54)
 
 [node name="OrangeTree" parent="." instance=ExtResource("10_76sg0")]
-position = Vector2(64, -60)
+position = Vector2(80, -54)
+
+[node name="WaypointPillar" parent="." instance=ExtResource("28_pbrb8")]
+position = Vector2(128, -46)
 
 [node name="ManSprite" parent="." instance=ExtResource("3_nhxn4")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 
-[node name="TileMap" type="TileMap" parent="." groups=["fakegrass"]]
+[node name="TileMap" type="TileMap" parent="."]
 material = SubResource("ShaderMaterial_bidw8")
 scale = Vector2(1.0192, 0.987579)
 tile_set = SubResource("TileSet_ptwyg")
@@ -269,3 +275,11 @@ texture = ExtResource("26_gl3qm")
 [node name="Bow" type="Sprite2D" parent="."]
 position = Vector2(47, 59)
 texture = ExtResource("27_rj6yq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-57, -55)
+shape = SubResource("RectangleShape2D_6e83h")
+
+[connection signal="body_entered" from="Area2D" to="." method="OnArea2DBodyEntered"]

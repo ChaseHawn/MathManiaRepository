@@ -13,14 +13,8 @@ public partial class playable_character : CharacterBody2D
 
 	public override void _Ready()
 	{
-		// 
 		AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		Grass = GetNode<AudioStreamPlayer>("/root/World/Grass");
-		AppleTree = GetNode<Node2D>("/root/World/AppleTree");
-		
-		Godot.Vector2 currentPosition = Position;
-		currentPosition += AppleTree.GlobalPosition;
-		Position = currentPosition;
 	}
 	
 	public override void _PhysicsProcess(double delta)
@@ -87,6 +81,7 @@ public partial class playable_character : CharacterBody2D
 	public void OnArea2DBodyEntered(Node body)
 	{
 		if (body.IsInGroup("fakegrass")){
+			GD.Print("test");
 			CallDeferred(nameof(DifferedSceneChange));
 		}
 	}

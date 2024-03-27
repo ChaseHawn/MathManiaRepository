@@ -115,4 +115,14 @@ public partial class world_game : Node2D
 			}
 		}
 	}
+
+	public void OnArea2DBodyEntered(Node body)
+	{
+		CallDeferred(nameof(DifferedSceneChange));
+	}
+
+	public void DifferedSceneChange()
+	{
+		GetTree().ChangeSceneToFile("res://scenes/battle.tscn");
+	}
 }
