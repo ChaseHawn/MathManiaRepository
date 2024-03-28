@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bir7jjfurmr7i"]
+[gd_scene load_steps=9 format=3 uid="uid://bir7jjfurmr7i"]
 
 [ext_resource type="Script" path="res://scenes/BattleUI.gd" id="1_63hvv"]
 [ext_resource type="Texture2D" uid="uid://c3cua1frrw13e" path="res://scenes/Background.png" id="1_akevh"]
 [ext_resource type="Texture2D" uid="uid://cyp6hl848435y" path="res://scenes/Dragon.png" id="2_hdgbr"]
+[ext_resource type="Resource" uid="uid://bqs4ivpok0kr" path="res://scenes/Dragon.tres" id="2_jq51l"]
+[ext_resource type="Texture2D" uid="uid://b7rbo7j1vai2y" path="res://art/characters/ManSpriteFinal_3.png" id="4_wsqyo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwv7e"]
 bg_color = Color(1, 0, 0, 0.721569)
@@ -34,6 +36,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_63hvv")
+enemy = ExtResource("2_jq51l")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 unique_name_in_owner = true
@@ -41,8 +44,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -1.0
 offset_right = 4.0
-offset_bottom = -3.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.997134, 1.00556)
@@ -68,7 +72,7 @@ scale = Vector2(2.02815, 1.94634)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="ProgressBar" type="ProgressBar" parent="Enemy1container"]
+[node name="Enemy1HP" type="ProgressBar" parent="Enemy1container"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
@@ -76,7 +80,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_nwv7e")
 value = 50.0
 show_percentage = false
 
-[node name="Label" type="Label" parent="Enemy1container/ProgressBar"]
+[node name="Label" type="Label" parent="Enemy1container/Enemy1HP"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = -2.0
@@ -88,7 +92,7 @@ text = "HP: 25/50
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Enemy" type="Sprite2D" parent="Enemy1container"]
+[node name="Enemy1" type="Sprite2D" parent="Enemy1container"]
 unique_name_in_owner = true
 position = Vector2(77, 75)
 scale = Vector2(0.777778, 0.864583)
@@ -175,9 +179,9 @@ text = "Attack4
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 26.0
-offset_top = 10.0
+offset_top = 11.0
 offset_right = 1126.0
-offset_bottom = 130.0
+offset_bottom = 131.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rwqv2")
 
 [node name="LabelText" type="Label" parent="Textbox1"]
@@ -205,3 +209,52 @@ offset_right = 1094.0
 offset_bottom = 120.0
 theme_override_font_sizes/font_size = 45
 text = ">"
+
+[node name="Playercontainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -331.0
+offset_top = -162.0
+offset_right = -176.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.02815, 1.94634)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Playersprite" type="Sprite2D" parent="Playercontainer"]
+unique_name_in_owner = true
+position = Vector2(75.4382, 83.7469)
+scale = Vector2(2.4653, 2.56892)
+texture = ExtResource("4_wsqyo")
+hframes = 6
+vframes = 6
+frame = 1
+
+[node name="PlayerHP" type="ProgressBar" parent="Playercontainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_nwv7e")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Playercontainer/PlayerHP"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 152.0
+offset_bottom = 16.0
+theme_override_font_sizes/font_size = 11
+text = "HP: 25/50
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="hidden" from="OptionsPanel" to="." method="_on_options_panel_hidden"]
+[connection signal="hidden" from="Textbox1" to="." method="_on_textbox_1_hidden"]
