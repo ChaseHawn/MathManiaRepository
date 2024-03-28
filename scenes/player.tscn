@@ -306,4 +306,8 @@ position = Vector2(0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_4512p")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_4512p")
+
 [connection signal="body_entered" from="Area2D" to="." method="OnArea2DBodyEntered"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br38nnuqthbcv"
-path="res://.godot/imported/background_glacial_mountains.png-4d9a53643e310d3f1cdf56dfd3488fa0.ctex"
+uid="uid://cyp6hl848435y"
+path="res://.godot/imported/Dragon.png-07f930631613caa99f7515db3c60600e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/background_glacial_mountains.png"
-dest_files=["res://.godot/imported/background_glacial_mountains.png-4d9a53643e310d3f1cdf56dfd3488fa0.ctex"]
+source_file="res://art/battle/Dragon.png"
+dest_files=["res://.godot/imported/Dragon.png-07f930631613caa99f7515db3c60600e.ctex"]
 
 [params]
 
